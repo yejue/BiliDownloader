@@ -11,3 +11,5 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 建立视频默认存储路径
 SAVE_PATH = os.path.join(BASE_DIR, 'static/video')
+# FFMPEG 默认路径
+FFMPEG_PATH = os.path.join(BASE_DIR, r'spiders\Bilibili\ffmpeg\bin\ffmpeg')
