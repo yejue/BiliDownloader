@@ -1,0 +1,61 @@
+QGroupBox{
+    background-color: #eaeaea;
+}
+#groupBox_2{
+    background-color: #eaeaea;
+    border-bottom: none;
+}
+#groupBox{
+    border: none;
+}
+#frame_content{
+    border-top: none;
+}
+
+/*最小化和关闭窗口*/
+#pushButton_min{
+    background-color: #eaeaea;
+    border: none;
+}
+#pushButton_close{
+    background-color: #eaeaea;
+    border: none;
+}
+#pushButton_min:hover{
+    color: #ffffff;
+    background: #006a9d;
+}
+#pushButton_close:hover{
+    color: #ffffff;
+    background: #ff1439;
+}
+
+#pushButton_save_path{
+    color: #ffffff;
+    background: rgba(34, 203, 255, 0.91);
+    border: none;
+    border-radius: 4px;
+}
+#pushButton_save_path:hover{
+    background: rgba(53, 223, 255, 0.91);
+    color: #ffffff;
+}
+#pushButton_save_path:pressed{
+    background: rgba(34, 203, 255, 0.91);
+    color: #ffffff;
+}
+
+#pushButton_download{
+    color: #ffffff;
+    background: rgba(34, 203, 255, 0.91);
+    border: none;
+    border-radius: 4px;
+}
+#pushButton_download:hover{
+    background: rgba(53, 223, 255, 0.91);
+    color: #ffffff;
+}
+#pushButton_download:pressed{
+    background: rgba(34, 203, 255, 0.91);
+    color: #ffffff;
+}
