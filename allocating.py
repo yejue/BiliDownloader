@@ -5,7 +5,7 @@ from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtGui import QIcon, QPixmap
 
 from controller import MainController
-from utils.ThreadModel import SpiderThread
+from utils.ThreadModel import SpiderThread2
 from loaders import SpiderLoader
 from spiders.Bilibili.biliDownloadSpider import BilibiliSpider
 
@@ -19,6 +19,8 @@ class RenderCenter(MainController):
         self.signals = {'download_signal': self.download_signal}    # 自定义信号表
         # 页面功能加载，下发信号表
         self.spider_loader = SpiderLoader(self, self.signals)
+        # 线程数记录
+        self.thread_flag = 1
 
     def controller(self):
         """ 信号绑定槽 """
@@ -26,9 +28,10 @@ class RenderCenter(MainController):
 
     def downloader(self, params):
         spider = BilibiliSpider(*params)
-        thread1 = SpiderThread('Thread-1', spider)
+        thread1 = SpiderThread2('Thread-{}'.format(self.thread_flag), spider)
+        self.thread_flag += 1
         thread1.start()
-        thread1.join()
+        thread1.exec()
 
 
 if __name__ == '__main__':
